@@ -1,0 +1,10 @@
+
+Todo:
+  ✔ Move in Pretter, eslint, @done(18-11-03 12:50)
+  ☐ Subscribe to pub nub in the `App.js`
+  ☐ Hook up Redux
+  ☐ Add publish thunk calls to Redux for Pubnub
+  ☐ Add message listener to Redux from Pubnub
+  ☐ Add Redux Local Storage plugin
+  ☐ When game starts up, it should look if game has a generated number already, before attempting to generate one.
+  ☐ Deploy game on Netlify
