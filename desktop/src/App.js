@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/home';
@@ -7,6 +7,15 @@ import { subscribeToChannel, unsubscribeToChannel, subscribe } from './services/
 import { onMessage, createChannel } from './containers/game-state';
 import { useMappedState, useDispatch } from 'redux-react-hook';
 import './App.css';
+
+const Loading = (props) => (
+  <div>Loading...</div>
+);
+
+const Desktop = lazy(() => import('./containers/desktop'));
+const LazyDesktop = (props) => (
+  <Suspense fallback={<Loading />}><Desktop /></Suspense>
+);
 
 const mapState = state => ({
   gamestate: state.gamestate,
@@ -32,7 +41,8 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" name="Home" component={Home} />
+        <Route path="/" exact name="Home" component={Home} />
+        <Route path="/desktop" name="Desktop" component={LazyDesktop} />
       </Switch>
     </BrowserRouter>
   );
