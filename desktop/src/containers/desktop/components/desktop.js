@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import desktopBgImage from '../../../assets/cinn.png';
 import Toolbar from '../../toolbar';
+import ApplicationShell from '../../application-shell';
 
 const DesktopBackground = styled.div`
   background-image: url(${desktopBgImage});
@@ -17,6 +18,7 @@ const DesktopBackground = styled.div`
 
 function Desktop(props) {
   return (<DesktopBackground>
+    <ApplicationShell />
     <Toolbar />
   </DesktopBackground>);
 }
