@@ -1,1 +1,1 @@
-export { default } from './application-shell';
+export { default } from './components/application-shell';

@@ -1,5 +1,5 @@
 import React from 'react';
-import MessagesContainer from '../containers/messages-container';
+import MessagesContainer from '../containers/messenger/messages-container';
 import styled from 'styled-components/native'
 
 const HomeView = styled.View`
