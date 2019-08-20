@@ -1,7 +1,7 @@
 import React from "react";
 import { DialogChoices } from "./DialogChoices";
 import { DialogChoiceChosen } from "./DialogChoiceChosen";
-import { IMessageChoice } from "../../types/message";
+import { IMessageChoice } from "../../../types/message";
 import styled from "styled-components/native";
 
 export const DialogChooserView = styled.View``;

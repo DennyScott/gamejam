@@ -1,5 +1,5 @@
 import React from "react";
-import { IMessage } from "../../types/message";
+import { IMessage } from "../../../types/message";
 import styled from "styled-components/native";
 
 export const MessageTextView = styled.Text`

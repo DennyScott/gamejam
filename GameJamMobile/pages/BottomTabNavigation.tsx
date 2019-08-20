@@ -12,7 +12,7 @@ const CameraIcon = (
   <Icon name='camera-alt' />
 )
 
-export default BottomTabNavigator = createBottomTabNavigator(
+const BottomTabNavigator = createBottomTabNavigator(
   {
     Messages: {
       screen: Home,
@@ -35,4 +35,6 @@ export default BottomTabNavigator = createBottomTabNavigator(
       showLabel: false,
     }
   },
-)
+);
+
+export default BottomTabNavigator;

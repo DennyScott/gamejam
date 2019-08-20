@@ -9,12 +9,12 @@ const PeopleView = styled.View`
   justify-content: center;
 `
 
-export default class PeopleScreen extends React.Component {
-  render() {
-    return (
-      <PeopleView>
-        <Text>Welcome to the People Screen</Text>
-      </PeopleView>
-    );
-  }
+function PeopleScreen() {
+  return (
+    <PeopleView>
+      <Text>Welcome to the People Screen</Text>
+    </PeopleView>
+  );
 }
+
+export default PeopleScreen;

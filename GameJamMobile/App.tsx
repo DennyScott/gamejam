@@ -7,9 +7,8 @@ const RootStack = createStackNavigator({
   Home: BottomTabNavigation,
 });
 
-
-export default class App extends React.Component {
-  render() {
-    return < RootStack />
-  }
+function App() {
+  return <RootStack />
 }
+
+export default App;

@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList, TouchableWithoutFeedback } from "react-native";
 import { Message } from "./Message";
 import styled from "styled-components/native";
-import { IMessage } from "../../types/message";
+import { IMessage } from "../../../types/message";
 
 export const MessagesView = styled.View`
   flex: 1;

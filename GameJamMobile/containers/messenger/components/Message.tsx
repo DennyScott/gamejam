@@ -1,5 +1,5 @@
 import React from "react";
-import { IMessage } from "../../types/message";
+import { IMessage } from "../../../types/message";
 import { MessageBubble } from "./MessageBubble";
 import styled from "styled-components/native";
 

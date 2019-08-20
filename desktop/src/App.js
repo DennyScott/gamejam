@@ -5,7 +5,7 @@ import Home from './pages/home';
 import { v4 } from 'uuid';
 import { subscribeToChannel, unsubscribeToChannel, subscribe } from './services/pubnub';
 import { onMessage, createChannel } from './containers/game-state';
-import { useMappedState, useDispatch } from 'redux-react-hook';
+import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 
 const Loading = (props) => (
@@ -17,12 +17,8 @@ const LazyDesktop = (props) => (
   <Suspense fallback={<Loading />}><Desktop /></Suspense>
 );
 
-const mapState = state => ({
-  gamestate: state.gamestate,
-});
-
 function App() {
-  const { gamestate } = useMappedState(mapState);
+  const gamestate = useSelector(state => state.gamestate);
   const dispatch = useDispatch();
 
   useEffect(

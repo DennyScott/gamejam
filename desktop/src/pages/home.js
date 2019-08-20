@@ -2,14 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import QRCode from 'qrcode';
 
 import {} from '../services/pubnub';
-import { useMappedState } from 'redux-react-hook';
-
-const mapState = state => ({
-  gamestate: state.gamestate,
-});
+import { useSelector } from 'react-redux';
 
 function Home() {
-  const { gamestate } = useMappedState(mapState);
+  const gamestate = useSelector(state => state.gamestate);
   const canvas = useRef(null);
 
   useEffect(

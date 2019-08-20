@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components/native";
 import { messageChoices, messages } from "./constants";
-import { Messages } from "./Messages";
-import { MessageInput } from "./MessageInput";
-import { DialogChooser } from "./DialogChooser";
+import { Messages } from "./components/Messages";
+import { MessageInput } from "./components/MessageInput";
+import { DialogChooser } from "./components/DialogChooser";
 
 const MessagesContainerView = styled.View`
   flex: 1;
 `;
 
-function MessagesContainer() {
+function Messenger() {
   const [isChooserOpen, setIsChooserOpen] = useState(false);
   const [selectedDialogOptionIndex, setSelectedDialogOptionIndex] = useState(0);
   const [currentMessages, setCurrentMessages] = useState(() =>
@@ -44,4 +44,4 @@ function MessagesContainer() {
   );
 }
 
-export default MessagesContainer;
+export default Messenger;

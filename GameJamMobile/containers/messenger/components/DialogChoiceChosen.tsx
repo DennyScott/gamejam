@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "react-native-elements";
-import { IDialogChoice } from "../../types/message";
+import { IDialogChoice } from "../../../types/message";
 import styled from "styled-components/native";
 
 export const DialogChoiceChosenView = styled.View``;
